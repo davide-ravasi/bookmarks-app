@@ -1,0 +1,18 @@
+<nav class="teal lighten-2" role="navigation">
+  <div class="nav-wrapper container">
+    <div class="row">
+        <div class="col m6 offset-m3">
+          <form [formGroup]="searchform" (ngSubmit)="onSubmit()">
+            <input 
+                type="search" 
+                q="bookmarksearch" 
+                id="search" 
+                matInput
+                placeholder="Insert search term..." 
+                formControlName="search" > 
+          <p *ngIf="searchform.controls.search.invalid && searchform.controls.search.touched" class="alert-message">searchkey is required</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
